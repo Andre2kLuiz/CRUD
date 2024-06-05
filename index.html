@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>CRUD</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span>Cadastro de Funcionarios</span>
+            <div class="btn-f">
+                <button onclick="openModal()" id="new">Incluir</button>
+                <button onclick="openModal2()" id="new2">Ponto</button>
+            </div>
+        </div>
+
+        <div class="divTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Nome</th>
+                        <th>Função</th>
+                        <th>Fone</th>
+                        <th>E-mail</th>
+                        <th>Faltas</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="modal-container">
+            <div class="modal">
+                <form action="">
+                    <label for="m-foto">foto</label>
+                    <input id="m-foto" type="file">
+                    <label for="m-nome">Nome</label>
+                    <input id="m-nome" type="text" required>
+                    <label for="m-funcao">Função</label>
+                    <input id="m-funcao" type="text" required>
+                    <label for="m-telefone">Telefone</label>
+                    <input id="m-telefone" type="tel" maxlength="15" required>
+                    <label for="m-email">E-mail</label>
+                    <input id="m-email" type="email" required>
+                    <label for="m-faltas">Falta</label>
+                    <input id="m-faltas" type="number">
+                    <button id="btnSalvar" type="button">Salvar</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal-container-falta">
+            <div class="modal">
+                <form action="">
+                    <div class="divTable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Foto</th>
+                                    <th>Nome</th>
+                                    <th>Faltas</th>                                 
+                                </tr>
+                            </thead>
+                            <tbody class="tb">
+            
+                            </tbody>
+                        </table>
+                    </div>
+                    <button type="button" id="btnSalvarFalta">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
